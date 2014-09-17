@@ -1,6 +1,5 @@
 
-asdadasda
-c4positioning
+//Luu Tuan Dung (1305915)
 
 Test changes
 Test change2
