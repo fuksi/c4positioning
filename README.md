@@ -1,6 +1,4 @@
-
-asdadasda
-c4positioning
+//This is a comment by Tran Dinh Thien Phuc (1305011)
 
 Test changes
 Test change2
