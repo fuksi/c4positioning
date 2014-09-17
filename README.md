@@ -13,6 +13,10 @@ change 5
 + TEST COMMIT : dinht
 + TEST COMMIT 2
 Data analysis and visualization of user movements - Application in strategic competitive paintball games.
-huuhbyugyugyug
+huuhbyugyugyug; 
+
+but that can conflict... maybe?
+
 
 juihuihuihuihuhhui
+With some extra changes :)
