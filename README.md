@@ -6,4 +6,6 @@ change 3
 =============
 
 Data analysis and visualization of user movements - Application in strategic competitive paintball games.
-huuhbyugyugyug
+huuhbyugyugyug; but that can conflict... maybe?
+
+With some extra changes :)
