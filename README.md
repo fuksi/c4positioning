@@ -55,7 +55,7 @@ Main modules and their functions represented
 
 5. Requirements (in traceable (and measurable) format)
 
-Functional requirements
+Functional requirements: *Consider the privacy of users*
 Non-functional system requirements
 Usability: how do you ensure that your system is easy to use?
 Reliability: how do you ensure that your system is reliable? List the possible system failures and how the system reacts to them
