@@ -28,25 +28,29 @@ What are the main risks in your upcoming project? How would you document the ris
 
 *Document structure*
 
-1. Cover
+###1. Cover
 
-Title "<Product name>: requirements of the system XX"
-Team name
-Team members
-Date
-Version history (if exist)
+Title: Software Requirement Specs of iCheck position system. 
+Team name: AFB (Apple Fan Boys)
+Team members: Tran Dinh Thien Phuc, Luu Tuan Dung
+Date: 18 Sep 2014
 
-2. Introduction
+###2. Introduction
 
-Overall description of the project, context
-Overall description of the system
+Inspired by the long wait, the displeasure when going to toilet and it's busy, going to coverred lab room and it's full, a position system is create in order to provide different services to students and staffs at Metropolia, for an untroubled experience, at Metropolia's facilities.
 
-3. Use cases
+###3. Use cases
 
-Definition of the user groups
-Use case diagrams
-Use case scenarios (based on template)
-Depiction of one use case as a flow chart
+* Users groups, brief and definition:  
+ * User/Visitor: not registered user, has never used the service before. The visitor the can review the service or register as a user/client or a user/service provider
+ * User/Client: registered user, has all the rights as visitors, plus user can use the services offered by the system.
+ * User/Service Provider: registered user, has all the rights as visitors, client, plus the ability to propose and offer services
+ * Admin: system administrator, has all rights in the system, can access and manage clients and services providers' attributes. 
+
+* Use case diagrams @luutuandungti can you add use cases here or better create a use case diagram
+
+* Use case scenarios (based on template)
+* Depiction of one use case as a flow chart
 
 4. System architecture
 
