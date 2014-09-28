@@ -50,7 +50,9 @@ iCheck implements new system architecture to address already existing and challe
  * User/Service Provider: registered user, has all the rights as visitors, client, plus the ability to propose and offer services
  * Admin: system administrator, has all rights in the system, can access and manage clients and services providers' attributes. 
 
-* Use case diagrams @luutuandungti can you add use cases here or better create a use case diagram
+* Use case diagrams
+
+![Use case diagrams](http://users.metropolia.fi/~dinht/UseCaseC4.jpg)
 
 * Use case scenarios (based on template)
 * Depiction of one use case as a flow chart
