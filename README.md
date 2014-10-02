@@ -57,12 +57,22 @@ iCheck implements new system architecture to address already existing and challe
 * Use case scenarios (based on template)
 * Depiction of one use case as a flow chart
 
-4. System architecture
+###4. System architecture
 
-High-level overview of the system
-Main modules and their functions represented
+__*High-level overview of the system*__
+iCheck is a application, which using indoor system positioning to check availability of lab or study room,toilet and University's cafeteria.  
 
-5. Requirements (in traceable (and measurable) format)
+__*Main modules and their functions represented*__
+
+![System architecture](http://users.metropolia.fi/~dinht/Architecture.jpg)  
+
+* UserVisitor class is a class contains fields about the current which is not login yet. A session when visitor visit the front page of the app will trigger a instantiation of this class, of which methods provides for example form to register, confirmation if the visitor can use the service, which is intended for Metropolia students, staffs, and service providers.  
+* UserClient class is a class for users such as students and staffs. UserSvProvider is a class for service providers. Passsed the registration process, these users have already have the app installed on a client. A connection to app should trigger a instantiation of the class, along with a session of the services. The same apply for class Admins  
+* __*UserSessions*__ is a main class for every session created by a user or an admin. An object of UserSessions should contains information i. e. about what kind of session this is, from a admin, students or service provider? When the session started? What type of device the client is using? and so on. The relationship between database and UserSessions is fundamental to the input, output of every sessions.  
+* As mentioned MySQLDatabase contains information about users, admins, and services as well as everything captured in the sessions in the table i. e. userLog, userLocation, serviceInit, sessionLength and so on, in order for system development later on in the project. 
+
+
+###5. Requirements (in traceable (and measurable) format)
 
 Functional requirements: *Consider the privacy of users*
 Non-functional system requirements
@@ -72,7 +82,7 @@ Efficiency: there are multiple people using your system. How do ensure that the 
 What other non-functional requirements should be documented?
 What kind of metrics you should use to guarantee unambiguity?
 
-6. User interface
+###6. User interface
 
 What are the views / components of the system? What are the functionalities of each view?
 Illustrate each view and what it is used for (Textual explanation ok, no need for pictures!)
@@ -82,7 +92,9 @@ Illustrate each view and what it is used for (Textual explanation ok, no need fo
 List the realized working hours, that is, how many hours did this work really take. List the hours separately per person.
 Was it difficult to estimate workload, how much the estimation differed from real working hours?
 What would you do differently on the next project? Was your project success, would you buy your product?
-What was the most difficult part in the documentation? Is there something that you were not satisfied with?
+What was the most difficult part in the documentation? Is there something that you were not satisfied with?  
+  
+
 Grading
 
 Max points: 30 p.
@@ -93,12 +105,3 @@ Max points: 30 p.
 +6: requirements (5)
 +6: user interface (6)
 
-In addition, each project group will peer review their own work and contribution of each participant,
-based on the review, points can be scaled up or down.
-
-Guidelines
-
-Focus on things that are required, keep the documentation simple and straightforward.
-Take advantage of the lab hours where Patrick is present to answer you questions.
-Share the workload. Work should be easy if each group member is committed to project.
-If you still have problems and don't understand what to do or how to do something, you can ask a question by sending an email to Olli
