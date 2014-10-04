@@ -8,24 +8,6 @@ Return Github project linkto Tuubi.
 
 Data analysis and visualization of user movements in the school areas, in order to provides different information for related parties with certain purposes such as: For student to check if labs have enough spaces, to check information about the cafeteria, and for example for the cafeteria as well to coordinate resources for busy time. 
 
-1) navigation service
-2) community service (friends)
-3) data analysis and visualization of the user movements (=big brother is watching you)
-4) teaching (e-learning): how to utilize the system in the classroom?
-5) a mobile game based on indoor positioning system
-
-Questions for describing the system:
-
-In which ways it is possible to argue and to state that you are really developing state-of-the-art solution?
-How is it possible to convince and motivate your customer with the documentation?
-Which parts/functionalities of the product should be mandatory and which not? Why?
-How you will state you are really building a quality product?
-How you will guarantee your process and team quality?
-How you are able to get enough money from the customer? How much money is needed, what is enough? How to decrease the costs?
-What are the main risks in your upcoming project? How would you document the risks and the solutions?
-
-
-
 *Document structure*
 
 ###1. Cover
