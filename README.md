@@ -1,5 +1,4 @@
-//This is a comment by Tran Dinh Thien Phuc (1305011)
-//Luu Tuan Dung (1305915)
+
 ####PLEASE ONLY CREATE PULL REQUEST FOR FILES INSIDE MAINPROJECT, README FILE IS MAINTAINED SEPARATELY
 
 **DEADLINE 4th of October 23:59 (Friday)**
@@ -33,7 +32,7 @@ What are the main risks in your upcoming project? How would you document the ris
 
 Title: Software Requirement Specs of iCheck position system. 
 Team name: AFB (Apple Fan Boys)
-Team members: Tran Dinh Thien Phuc, Luu Tuan Dung
+Team members: Tran Dinh Thien Phuc, Tran Bao, Nguyen Thu Ha Phuong
 Date: 18 Sep 2014
 
 ###2. Introduction
@@ -53,9 +52,55 @@ iCheck implements new system architecture to address already existing and challe
 * Use case diagrams
 
 ![Use case diagrams](http://users.metropolia.fi/~dinht/UseCaseC4.jpg)
+http://users.metropolia.fi/~dinht/UseCaseC4.jpg
 
 * Use case scenarios (based on template)
-* Depiction of one use case as a flow chart
+
+#####Example 1: A register user wants to locate closest free labrooms.  
+
+1. initial state  
+ * Sitting in front of a working PC or other similar devices
+2. normal flow
+ * User clicks on iCheck app on the phone (or open iCheck.io on web browsers)
+ * Locate login button on top right and click on it
+ * Input login details and clicks login
+ * At user interface, clicks on school services in 'Service' tab
+ * In school services - click on 'Locate free lab rooms'
+ * Cick on one of the listed lab rooms for direction if needed
+ * (Follow direction)
+3. what can go wrong  
+ * Device's internet connection is not working
+ * Mistyped login credentials
+ * Service unavailable at the moment
+ * Device's location serviced is turn off
+4. other activites going on at the same time  
+ * User multitasks at the same time on phone i.e. messaging, playgame while waiting for the app to load
+ * User left the app window for more than limited time to do other stuffs, app session then is stopped.
+5. Successful - end state
+ * Free closest lab rooms are listed on screen  
+
+#####Example 2: Cafeteria wants to notice or students and staffs about change in lunch schedule tomorrow.  
+
+1. initial state  
+  * Sitting in front of a working PC or other similar devices
+2. normal flow  
+  * user clicks on iCheck app for Enterprise on the phone (or open iCheckE.io on web browsers)
+  * Locate login button on top right and click on it
+  * Input login credentials and clicks login
+  * At UI for Enterprise, locate 'Quick notice' in the bottom and click on it
+  * In 'Target Group' section, locate and click on 'Students' and 'Staffs'
+  * In 'Content' section, enter text about the change in schedule
+  * When done, click send
+3. What can go wrong  
+  * Receivers notification setting is off
+  * Mistyped login credentials
+  * Internet connection lost in the middle of process transaction  
+4. Other activites going on at the same time  
+  * User multitasks at the same time on phone i.e. messaging, playgame while waiting for the app to load
+  * User left the app window for more than limited time to do other stuffs, app session then is stopped.  
+5. Successful - end state
+  * All target groups' users received the notifications   
+
 
 ###4. System architecture
 
@@ -74,34 +119,83 @@ __*Main modules and their functions represented*__
 
 ###5. Requirements (in traceable (and measurable) format)
 
-Functional requirements: *Consider the privacy of users*
-Non-functional system requirements
-Usability: how do you ensure that your system is easy to use?
-Reliability: how do you ensure that your system is reliable? List the possible system failures and how the system reacts to them
-Efficiency: there are multiple people using your system. How do ensure that the system is efficient enough? What metrics would you use?
+#####1. Functional requirements:
+
+ * Account: If the visitors are not logged in, application should have the options for them to choose: log in if they have account or sign up if they have not got the account yet. 
+ * Forget Password: If users forget their password, application can ask the user to provide their registered email address in order to send them their forgotten password.
+ * If users login process success, the application should show the features list like getcheckAttendance, show cafeteria condition, show free labs , show available WC.
+ * Users have to post their current postion to the application in order to get the Check Attendence functions, get currently available WC.
+ * Users can access all the information of themself
+ * Users can give feedback or report bugs through feedback form and admins receive the feedback
+
+#####2. Non-functional system requirements  
+
+ * Usability: System should be simple, clear, and easy for user to interact with. Front page will contain the login and sign up features, each features will have its form for user to process. After users have logged in, system will show a list of features. Some features will need the position of users, so system will ask them to access their postion information. Each features will have its page, which simply show the information in that features.  
+
+ * Reliability: how do you ensure that your system is reliable? List the possible system failures and how the system reacts to them. System has to protect user's information. Only admins and service provider can view part of user's information which is needed for their tasks. The user's position information should be also secured so that other cannot view it. For some tasks, users have to provide their position so that they cannot cheat like in check Attendance features.
+Possible system failure may occur:   
+  * Uncorrected ID/password -> log in again/forgot password/register
+  * Cannot access position -> post Position/check phone connectivity/cancel
+   
+ * Efficiency: Since there thousands of people using the service, the system requires using some metrics which can help the system guarantee the speed, accessibility of the service. Fortunately, most uses occurs when users are at the university using the university's network, then the other important thing we need to consider is a user's ability to quickly get to know the application of the service. 
+
+Along with the review of the service for guests, when login for the first time, users can go through simple hints how to quickly accomplish tasks with the user interfaces. These hint are spreads into different level, so it would not make users feel frustrated by going all the hints at one time.
+
+
 What other non-functional requirements should be documented?
-What kind of metrics you should use to guarantee unambiguity?
+* Flexibility: Other extra or improvement should be discussed and planned from the beginning in order to make decision during the development process
+* Portability: Application can run smoothly in mutiple platforms.
+* Accessibility: Application should be easily accessed and used by everyone. Users do not have troubles to access and use the application.
+* Scalability: System has the capability to grow in its capacity to meet the rising demand for its services offered.
 
 ###6. User interface
 
-What are the views / components of the system? What are the functionalities of each view?
-Illustrate each view and what it is used for (Textual explanation ok, no need for pictures!)
+Views and components are listed and described by words
 
-7. Project management, self reflection
+Views
 
-List the realized working hours, that is, how many hours did this work really take. List the hours separately per person.
-Was it difficult to estimate workload, how much the estimation differed from real working hours?
-What would you do differently on the next project? Was your project success, would you buy your product?
-What was the most difficult part in the documentation? Is there something that you were not satisfied with?  
-  
+	* Start page
+	* Login
+	* Sign up
+	* Main page( with features list)
+	* Check Attendance
+	* Cafeteria condition
+	* Available labs room
+	* Available nearest WC
+	
+Components
 
-Grading
+	* Banner
+	* Navigation
+	* Show list button
+	* Back button
+	* Footer
+	
+Components
 
-Max points: 30 p.
+	* Banner: in the top middle of the page, it is displayed in every pages.
+	* Navigation: in the start page, the navigation will contain login and logout, change language categories
+	* Show list button: it display in everypage except the start page. It is located in the top right corner of the page. It shows the langguage settings and logout. 
+	* Back button: User can go to the previous page by the back button. This button is located in the top left of the page.
+	* Footer: contain information like about author, service, legal issues.
+	
+Pages
 
-+6: cover+ introduction + project management (1,2,7)
-+6: use cases (3)
-+6: system overview (4)
-+6: requirements (5)
-+6: user interface (6)
+	* Start page: select language, description of the app in the middle, Login and Logout selection link. Actually users can login and logout from the main page.
+	* Login: Username, password, submit, sign up link
+	* Sign up: Form(email,username,password), agree to the Terms & Conditions, fill in the form , create new account and finally submit.
+	* Main page: a list of main function features(check attendance, cafeteria condition, available labs room, available nearest WC)
+	* Check attendance: require users to post their position. Display the class and subjects, then users can check Check Attendance button to confirm. If system cannot get user's position, a message will display to announce to users that they have to check the phone connectivity. If users are not in the class, systems announce to user that it cannot complete the action, please check again.
+	* Cafeteria condition: Display the condition of cafeteria at the moment. This features side can display such as(crowded, normal, solitary) and also display the food that are served in that cafeteria, also the opened and closed time.
+	* Available labs room: Users can simply press the Available labs room button then the page displays which room is available, number of available of seats and number of available computer, time of next class in that room.
+	* Avalable nearest WC: require users to post their position. Simply show the map and get a guide line for users to go to their nearest WC.
+	
+
+
+####7. Project management, self reflection
+
+ * Working hours for this documentation was around a day or half a day for whole team.
+Hours separately per person: Phuc 6 hours,Bao 6 hours.  
+
+ * It was difficult to estimate the workload since we have to decided the limit of the project any time since we are doing only the documentation, not the implementation of the project. Real working hours was quite a bit less than estimated the the start of 2nd year probably is busiest time of the whole degree. The product is relevant, so yes, as a stakeholder, I would buy the product. The most difficult part of the documentation is trying the list the specification of a product that you not really going to make. Then we who are making this documentation are not the stakeholder of the documentation itself, then we find it hard to get the motivation to think deeper and develop the project as well as the documentation. 
 
